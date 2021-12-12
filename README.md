@@ -3,7 +3,7 @@
 [![apm](https://flat.badgen.net/apm/license/build-vite)](https://atom.io/packages/build-vite)
 [![apm](https://flat.badgen.net/apm/v/build-vite)](https://atom.io/packages/build-vite)
 [![apm](https://flat.badgen.net/apm/dl/build-vite)](https://atom.io/packages/build-vite)
-[![CI](https://img.shields.io/github/workflow/status/idleberg/atom-b/CI?style=flat-square)](https://github.com/idleberg/atom-b/actions)
+[![CI](https://img.shields.io/github/workflow/status/idleberg/atom-build-vite/CI?style=flat-square)](https://github.com/idleberg/atom-build-vite/actions)
 [![David](https://flat.badgen.net/david/dev/idleberg/atom-build-vite)](https://david-dm.org/idleberg/atom-build-vite?type=dev)
 
 [Atom Build](https://atombuild.github.io/) provider for `vite`, the next generation frontend tooling for the Web.
