@@ -39,40 +39,40 @@ export function provideBuilder() {
     }
 
     settings() {
+      const viteLocation = Config.get('viteLocation');
+      const exec = viteLocation === 'local' ? 'npx' : 'vite';
+
       return [
         {
           name: 'Vite: build',
-          exec: 'vite',
-          args: [
-            'build',
-            ...Config.get('customBuildArguments'),
-            '{FILE_ACTIVE}'
-          ],
-          cwd: '{FILE_ACTIVE_PATH}',
+          exec: exec,
+          args: (viteLocation === 'local'
+            ? ['vite', 'build', Config.get('customBuildArguments')]
+            : ['build', Config.get('customBuildArguments')]
+          ),
+          cwd: '{PROJECT_PATH}',
           sh: false,
           atomCommandName: 'vite:build'
         },
         {
           name: 'Vite: optimize',
-          exec: 'vite',
-          args: [
-            'optimize',
-            ...Config.get('customOptimizeArguments'),
-            '{FILE_ACTIVE}'
-          ],
-          cwd: '{FILE_ACTIVE_PATH}',
+          exec: exec,
+          args: (viteLocation === 'local'
+            ? ['vite', 'optimize', Config.get('customOptimizeArguments')]
+            : ['optimize', Config.get('customOptimizeArguments')]
+          ),
+          cwd: '{PROJECT_PATH}',
           sh: false,
           atomCommandName: 'vite:optimize'
         },
         {
           name: 'Vite: preview',
-          exec: 'vite',
-          args: [
-            'preview',
-            ...Config.get('customPreviewArguments'),
-            '{FILE_ACTIVE}'
-          ],
-          cwd: '{FILE_ACTIVE_PATH}',
+          exec: exec,
+          args: (viteLocation === 'local'
+            ? ['vite', 'preview', Config.get('customPreviewArguments')]
+            : ['preview', Config.get('customOptimizeArguments')]
+          ),
+          cwd: '{PROJECT_PATH}',
           sh: false,
           atomCommandName: 'vite:preview'
         }

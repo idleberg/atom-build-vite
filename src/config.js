@@ -2,13 +2,28 @@ import { name } from '../package.json';
 
 export default {
   schema: {
+    viteLocation: {
+      title: 'Vite Location',
+      description: 'Specify whether to use global or local `vite` installation',
+      type: 'string',
+      default: 'local',
+      enum: [
+        {
+          value: 'local',
+          description: 'Local Vite'
+        },
+        {
+          value: 'global',
+          description: 'Global Vite'
+        }
+      ],
+      order: 6
+    },
     customBuildArguments: {
       title: 'Build arguments',
       description: 'Set custom arguments for `vite build`',
       type: 'array',
-      default: [
-        '{PROJECT_PATH}'
-      ],
+      default: [],
       items: {
         type: [
           'string',
@@ -21,9 +36,7 @@ export default {
       title: 'Preview arguments',
       description: 'Set custom arguments for `vite preview`',
       type: 'array',
-      default: [
-        '{PROJECT_PATH}'
-      ],
+      default: [],
       items: {
         type: [
           'string',
@@ -36,9 +49,7 @@ export default {
       title: 'Optimize arguments',
       description: 'Set custom arguments for `vite optimize`',
       type: 'array',
-      default: [
-        '{PROJECT_PATH}'
-      ],
+      default: [],
       items: {
         type: [
           'string',
