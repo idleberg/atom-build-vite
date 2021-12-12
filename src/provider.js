@@ -29,7 +29,7 @@ export function provideBuilder() {
         return true;
       }
 
-      if (which.sync('vite', { nothrow: true })) {
+      if (which.sync(this.getExec(), { nothrow: true })) {
         Logger.log('Build provider is eligible');
         return true;
       }
@@ -38,9 +38,14 @@ export function provideBuilder() {
       return false;
     }
 
+    getExec() {
+      const viteLocation = Config.get('viteLocation');
+      return viteLocation === 'local' ? 'npx' : 'vite';
+    } 
+
     settings() {
       const viteLocation = Config.get('viteLocation');
-      const exec = viteLocation === 'local' ? 'npx' : 'vite';
+      const exec = this.getExec();
 
       return [
         {
