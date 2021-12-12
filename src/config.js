@@ -17,7 +17,7 @@ export default {
           description: 'Global Vite'
         }
       ],
-      order: 6
+      order: 0
     },
     customBuildArguments: {
       title: 'Build arguments',
