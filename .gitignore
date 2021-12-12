@@ -1,0 +1,14 @@
+# Package Managers
+bower_components/
+node_modules/
+npm-debug.log*
+vendor/
+yarn.lock
+
+# Development
+.eslintcache
+*.map
+
+# Project specific
+lib/*LICENSE.txt
+todo.md
