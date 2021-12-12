@@ -1,6 +1,6 @@
 {
   "name": "build-vite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Atom Build provider for Vite, the next generation frontend tooling for the Web",
   "repository": "https://github.com/idleberg/atom-build-vite",
   "license": "MIT",
