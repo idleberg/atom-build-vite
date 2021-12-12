@@ -6,7 +6,9 @@ export default {
       title: 'Build arguments',
       description: 'Set custom arguments for `vite build`',
       type: 'array',
-      default: [],
+      default: [
+        '{PROJECT_PATH}'
+      ],
       items: {
         type: [
           'string',
@@ -19,7 +21,9 @@ export default {
       title: 'Preview arguments',
       description: 'Set custom arguments for `vite preview`',
       type: 'array',
-      default: [],
+      default: [
+        '{PROJECT_PATH}'
+      ],
       items: {
         type: [
           'string',
@@ -32,7 +36,9 @@ export default {
       title: 'Optimize arguments',
       description: 'Set custom arguments for `vite optimize`',
       type: 'array',
-      default: [],
+      default: [
+        '{PROJECT_PATH}'
+      ],
       items: {
         type: [
           'string',
