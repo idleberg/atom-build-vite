@@ -20,7 +20,7 @@ export default {
       order: 0
     },
     customBuildArguments: {
-      title: 'Build arguments',
+      title: 'Build Arguments',
       description: 'Set custom arguments for `vite build`',
       type: 'array',
       default: [],
@@ -33,7 +33,7 @@ export default {
       order: 1
     },
     customPreviewArguments: {
-      title: 'Preview arguments',
+      title: 'Preview Arguments',
       description: 'Set custom arguments for `vite preview`',
       type: 'array',
       default: [],
@@ -46,7 +46,7 @@ export default {
       order: 2
     },
     customOptimizeArguments: {
-      title: 'Optimize arguments',
+      title: 'Optimize Arguments',
       description: 'Set custom arguments for `vite optimize`',
       type: 'array',
       default: [],
