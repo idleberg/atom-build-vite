@@ -41,7 +41,7 @@ export function provideBuilder() {
     getExec() {
       const viteLocation = Config.get('viteLocation');
       return viteLocation === 'local' ? 'npx' : 'vite';
-    } 
+    }
 
     settings() {
       const viteLocation = Config.get('viteLocation');
@@ -75,7 +75,7 @@ export function provideBuilder() {
           exec: exec,
           args: (viteLocation === 'local'
             ? ['vite', 'preview', Config.get('customPreviewArguments')]
-            : ['preview', Config.get('customOptimizeArguments')]
+            : ['preview', Config.get('customPreviewArguments')]
           ),
           cwd: '{PROJECT_PATH}',
           sh: false,

@@ -22,7 +22,7 @@
   ],
   "providedServices": {
     "builder": {
-      "description": "Transpiles JavaScript",
+      "description": "Builds JavaScript",
       "versions": {
         "2.0.0": "provideBuilder"
       }
